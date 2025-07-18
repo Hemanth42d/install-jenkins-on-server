@@ -61,6 +61,8 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
 >6. Jenkins is ready to use at port 8080
 
 
+<hr>
+<hr>
 
    
 ![Jenkins Server](jenkins_server.png)
