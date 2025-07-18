@@ -59,6 +59,9 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
 >4. Install Plugins in jenkins.
 >5. Create your first Admin User.
 >6. Jenkins is ready to use at port 8080
+
+
+
    
 ![Jenkins Server](jenkins_server.png)
 
