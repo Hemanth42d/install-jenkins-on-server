@@ -34,6 +34,8 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
 >```bash
 >sudo apt update
 >sudo apt install docker.io
+># if your server is not loged in as root user then add the current user to docker group
+>sudo usermod -aG <Group> $USER
 >```
 >2. Install jenkins container in the server
 >```bash
