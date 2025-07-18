@@ -39,7 +39,7 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
 >```bash
 >docker run -p 8080:8080 -p 50000:50000 -d \
 >-v jenkins_home:/var/jenkins_home  jenkins/jenkins:lts
->#  (name refernece)=(server)        (Image name)
+># (name refernece):(server_Path)   (Image name)
 ># 50000 --> This is the port where jenkins master and worker nodes communicate, ( jenkins can be actually build and started as a cluster )
 ># 8080 --> jenkins runs on this port
 ># -d --> detached mode.
