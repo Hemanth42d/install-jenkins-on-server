@@ -40,7 +40,7 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
       /etc/apt/sources.list.d/jenkins.list > /dev/null
     ```
     - > sudo wget -O /usr/share/keyrings/jenkins-keyring.asc ... : Downloads the Jenkins GPG public key and saves it to a specific directory where apt looks for trusted keys
-      > echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] ..." | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null: Creates a new file /etc/apt/sources.list.d/jenkins.list which tells apt where to find the Jenkins packages. signed-by ensures apt uses the downloaded key for verification.
+    - > echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] ..." | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null: Creates a new file /etc/apt/sources.list.d/jenkins.list which tells apt where to find the Jenkins packages. signed-by ensures apt uses the downloaded key for verification.
 
 4. Install jenkins
    - ```bash
