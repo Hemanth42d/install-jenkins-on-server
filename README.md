@@ -47,13 +47,20 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
      sudo apt update
      sudo apt install jenkins -y
      ```
-5. Start and enable jenkins service
+5. Create jenkins user and give that users permission of jenkins service.
+  - ```bash
+    sudo useradd -m -s /bin/bash jenkins_runner_user
+    # -m --> creates the user's home directory
+    # -s /bin/bash --> make user shell as bash default
+    ```
+
+6. Start and enable jenkins service
    - ```bash
      sudo systemctl start jenkins        # Start the Jenkins service (if not already running)
      sudo systemctl enable jenkins       # Enable Jenkins to start automatically on boot
      sudo systemctl status jenkins       # Check the status of the Jenkins service
      ```
-6. Then Start using jenkins on port 8080
+7. Then Start using jenkins on port 8080
 
 ## Run Jenkins as Docker Container
 
