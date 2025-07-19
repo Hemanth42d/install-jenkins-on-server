@@ -18,6 +18,42 @@ In this Repository we will discuss how to install jenkins on ubuntu server.
 
 ## Install jenkins directly on Os
 
+1. Update your server
+    - ```bash
+       sudo apt update
+       sudo apt upgrade
+       ```
+2. Install java (openjdk 17)
+    - ```bash
+      sudo apt install openjdk-17-jdk -y
+      java --version
+      ```
+3. Add the Jenkins Repository key and source list
+  - ```bash
+    # Add the Jenkins GPG key
+    sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+      https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    
+    # Add the Jenkins repository to your sources.list.d
+    echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+      https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+      /etc/apt/sources.list.d/jenkins.list > /dev/null
+    ```
+    - > sudo wget -O /usr/share/keyrings/jenkins-keyring.asc ... : Downloads the Jenkins GPG public key and saves it to a specific directory where apt looks for trusted keys
+      > echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] ..." | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null: Creates a new file /etc/apt/sources.list.d/jenkins.list which tells apt where to find the Jenkins packages. signed-by ensures apt uses the downloaded key for verification.
+
+4. Install jenkins
+   - ```bash
+     sudo apt update
+     sudo apt install jenkins -y
+     ```
+5. Start and enable jenkins service
+   - ```bash
+     sudo systemctl start jenkins        # Start the Jenkins service (if not already running)
+     sudo systemctl enable jenkins       # Enable Jenkins to start automatically on boot
+     sudo systemctl status jenkins       # Check the status of the Jenkins service
+     ```
+6. Then Start using jenkins on port 8080
 
 ## Run Jenkins as Docker Container
 
